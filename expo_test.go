@@ -20,8 +20,7 @@ func ExampleExpandOptions() {
 	expand = opts.Expand("publisher")
 	fmt.Println("Expand publisher:", expand)
 
-	pubOpts := opts.Sub("publisher")
-	expand = pubOpts.Expand("contact")
+	expand = opts.Sub("publisher").Expand("contact")
 	fmt.Println("Expand publisher.contact:", expand)
 
 	// Output:
